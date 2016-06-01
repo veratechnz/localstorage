@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basics</title>
+</head>
+<body>
+	
+</body>
+
+
+	<script>
+
+	//1. Cookies
+	//2. LocalStorage basics
+	//3. Get set then loop
+	//4. Clear with Maintenance
+	//5. Excercise with function creation
+
+	messingWithLocal();
+
+	function messingWithLocal(){
+
+		localStorage.setItem('message_0', 'Good Morning To You');
+		//Here we use associative array syntax to set an item. 
+		localStorage['message_1'] = 'What is for lunch today';
+		var sticky = localStorage.getItem('message_0');
+
+
+	}
+
+
+	//Here we use a loop to scan through local storage. 
+
+	var localLooper = function(){
+
+		for (var i = 0; i < localStorage.length; i++) {
+			var key = localStorage.key(i);
+			var value = localStorage[key];
+			alert(value)	
+		
+		}
+	}();
+
+	// ****localStorage.setItem("sticky_0", "Pick up dry cleaning");
+	// localStorage.setItem("sticky_1", "Cancel cable tv, who needs it now?");
+	// var stickyValue = localStorage.getItem("sticky_0");
+	// // Also // var stickyValue = localStorage['sticky_0'];
+	// alert(stickyValue);
+
+	// ***Local storage setting and testing with a loop
+		// localStorage.setItem('test', 'testing 1');
+		// localStorage.setItem('test2', 'testing 2');
+		// localStorage.setItem('test3', 'testing 3');
+
+		// for(var i in localStorage)
+		// {
+		//     console.log(localStorage[4]);
+		// }
+
+	// Checking for a local storage key
+	// Quoting from the specification:
+
+	// The getItem(key) method must return the current value associated with the given key. If the given key does not exist in the list associated with the object then this method must return null.
+
+	// You should actually check against null.
+	// localStorage.setItem('beenHere', 'visited')
+	// // localStorage.clear();
+	// if (localStorage.getItem("beenHere") === null) {
+	//   alert('a');
+	// } else {
+	// 	alert('We have a returning visitor');
+	// }
+
+	// location with javascript
+	// Logging and testing a location
+	// window.onload = urlCheck();
+	// 	function urlCheck(){
+	// 		console.log(window.location.href);
+			// if(window.location.href === "address to check") {
+			//     // some code to load
+			// } else {
+			//     document.write('<div>testing my super loaded div code sample</div>')
+			// }	
+				
+		// }
+
+
+
+	</script>
+</html>
